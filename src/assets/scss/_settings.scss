@@ -49,19 +49,28 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+$primary-color: #e39a33;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
+  primary: $primary-color,
+  secondary: #6f848c,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
+
+// Custom
+// Header
+$primary-background: #f3e6ce;
+// Menu
+$secondary-background: #c6bfb3;
+
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
+$black: #2e2e2e;
+// $black: #0a0a0a;
+$white: lighten($primary-background, 9);
+$body-background: lighten($primary-background, 9);
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -618,4 +627,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-

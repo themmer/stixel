@@ -63,4 +63,5 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     - "src/assets/js/!(app).js"
+    - "src/assets/js/building-blocks/sticky-shrinknav.js"
     - "src/assets/js/app.js"
