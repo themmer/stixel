@@ -2,6 +2,10 @@
 
 # ZURB Template
 
+```
+https://github.com/zurb/foundation-zurb-template/
+```
+
 ### Using the CLI
 
 Install the Foundation CLI with this command:
@@ -47,3 +51,9 @@ http://localhost:8000
 ```
 
 To create compressed, production-ready assets, run `npm run build`.
+
+# Font Awesome
+
+```
+http://foundation.zurb.com/forum/posts/46991-howto-foundation-6-font-awesome-and-other-asset-fonts
+```
