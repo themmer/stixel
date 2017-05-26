@@ -1,11 +1,19 @@
 <h1>Contact</h1>
 
 <div class="align-center">
-  <h5>Tim Hemmer</h5>
-  {{> rounded-social-buttons}}
-  
-  Contact form here using that one website
-  <h5>themmer AT gmail DOT com</h5>
+  <div class="spacer-bottom-2">
+    <h5>Tim Hemmer</h5>
+    {{> rounded-social-buttons}}
+  </div>
 
-
+  <div class="row spacer-top-2">
+    <div class="column small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+      <div class="align-center">
+      <form method="POST" action="http://formspree.io/themmer@gmail.com">
+        <input type="email" name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Your message"></textarea>
+        <button type="submit" class="button">Send</button>
+      </form>
+    </div>
+  </div>
 </div>
