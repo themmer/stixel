@@ -39,6 +39,7 @@ body {
   transform: translateY(-$sticky-shrinknav-menu-height/2);
   margin-bottom: 0;
   color: $secondary-color;
+  width: 100%;
   h1 {
     color: $primary-color;
   }
