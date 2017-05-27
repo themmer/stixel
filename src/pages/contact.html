@@ -1,19 +1,25 @@
-<h1>Contact</h1>
+<h2>Contact</h2>
 
 <div class="align-center">
   <div class="spacer-bottom-2">
-    <h5>Tim Hemmer</h5>
+    <h4>Tim Hemmer</h4>
     {{> rounded-social-buttons}}
   </div>
 
   <div class="row spacer-top-2">
     <div class="column small-12 medium-8 medium-offset-2 large-6 large-offset-3">
-      <div class="align-center">
-      <form method="POST" action="http://formspree.io/themmer@gmail.com">
-        <input type="email" name="email" placeholder="Your email">
-        <textarea name="message" placeholder="Your message"></textarea>
-        <button type="submit" class="button">Send</button>
-      </form>
+      <div class="card">
+        <h3 class="spacer-top-2">Send Email</h3>
+        <div class="card-section">
+          <form method="POST" action="http://formspree.io/themmer@gmail.com">
+            <input type="email" name="email" placeholder="Your email">
+            <textarea name="message" placeholder="Your message"></textarea>
+            <div class="align-right spacer-top-2">
+              <button type="submit" class="button">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>
