@@ -1,8 +1,8 @@
 $sticky-shrinknav-menu-height: rem-calc(50);
-$sticky-shrinknav-hero-height: 200px;
+$sticky-shrinknav-hero-height: 210px;
 
 body {
-  padding-top: $sticky-shrinknav-hero-height + 30px;
+  padding-top: $sticky-shrinknav-hero-height;
 }
 
 .sticky-shrinknav-header {
@@ -38,8 +38,6 @@ body {
     position: absolute;
     background-color: lighten($primary-background, 9);
     bottom: 0;
-
-
     width: 100%;
     transition: all 0.5s ease;
     .sticky-shrinknav-menu {
@@ -58,10 +56,16 @@ body {
         &:hover {
           box-shadow: 0 0 0 1px $primary-color;
         }
+        &.active {
+          box-shadow: 0 0 0 1px $primary-color;
+        }
       }
 
       a {
         &:hover {
+          color: $primary-color;
+        }
+        &.active {
           color: $primary-color;
         }
         color: $white;
@@ -72,7 +76,9 @@ body {
 
 .sticky-shrinknav-wrapper {
   padding-top: 80px;
-
+  .content {
+    margin-top: 10px;
+  }
   .sticky-shrinknav-header{
     opacity: .9;
     height: $sticky-shrinknav-menu-height;
