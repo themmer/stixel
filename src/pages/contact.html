@@ -1,18 +1,20 @@
-<div class="align-center">
+<div class="align-center spacer-top-2">
   <div class="spacer-bottom-2">
     {{> rounded-social-buttons}}
   </div>
 
   <div class="row spacer-top-2">
     <div class="column small-12 medium-8 medium-offset-2 large-6 large-offset-3">
-      <div class="card">
-        <h3 class="spacer-top-2">Send Email</h3>
+      <div class="card spacer-top-2">
+        <div class="header">
+          <h4>Send Email</h4>
+        </div>
         <div class="card-section">
           <form method="POST" action="http://formspree.io/themmer@gmail.com">
             <input type="email" name="email" placeholder="Your email">
             <textarea name="message" placeholder="Your message"></textarea>
             <div class="align-right spacer-top-2">
-              <button type="submit" class="button">Send</button>
+              <button type="submit" class="button action">Send</button>
             </div>
           </form>
         </div>

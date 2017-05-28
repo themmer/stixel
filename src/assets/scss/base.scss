@@ -1,3 +1,6 @@
+.button.action {
+  margin-bottom: 0;
+}
 .align-center {
   text-align: center;
 }
@@ -10,6 +13,10 @@
   margin-top: 20px;
 }
 
+.spacer-top {
+  margin-top: 10px;
+}
+
 .spacer-bottom-2 {
   margin-top: 20px;
 }
@@ -20,4 +27,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .bold {
   font-weight: bold;
+}
+
+.card .header {
+  background-color: $secondary-color;
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+  border-bottom: 1px solid $light-gray;
 }
