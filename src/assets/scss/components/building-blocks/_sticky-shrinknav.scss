@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $primary-background;
+  background-color: darken($secondary-color, 10);
   text-align: center;
   position: fixed;
   top: 0;
@@ -31,11 +31,12 @@ body {
       color: $primary-color;
     }
     h3 {
-      color: $secondary-color;
+      color: $white;
     }
   }
   .sticky-shrinknav-menu-wrapper {
     position: absolute;
+    // Allow shadow
     background-color: lighten($primary-background, 9);
     bottom: 0;
     width: 100%;
@@ -53,10 +54,7 @@ body {
         border-radius: 2px;
         transition: all 0.3s ease;
 
-        &:hover {
-          box-shadow: 0 0 0 1px $primary-color;
-        }
-        &.active {
+        &:hover, &.active {
           box-shadow: 0 0 0 1px $primary-color;
         }
       }
