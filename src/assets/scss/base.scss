@@ -35,4 +35,20 @@ h1, h2, h3, h4, h5, h6 {
     color: $white;
   }
   border-bottom: 1px solid darken($secondary-color, 20);
+  @extend .align-center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.button-card {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  @extend .align-right;
+}
+
+.card-section.action {
+  padding-bottom: 72px;
 }
