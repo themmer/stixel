@@ -10,9 +10,11 @@
           <h4>Send Email</h4>
         </div>
         <div class="card-section">
-          <form method="POST" action="http://formspree.io/themmer@gmail.com">
+          <form method="POST" action="https://formspree.io/themmer@gmail.com">
             <input type="email" name="email" placeholder="Your email">
             <textarea name="message" placeholder="Your message"></textarea>
+            <input type="hidden" name="_subject" value="Stixel Dev Contact" />
+            <input type="hidden" name="_next" value="/thanks.html" />
             <div class="align-right spacer-top-2">
               <button type="submit" class="button action">Send</button>
             </div>
