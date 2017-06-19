@@ -4,6 +4,7 @@ import browser from 'browser-sync';
 import fs from 'fs';
 import gulp from 'gulp';
 import sitemap from 'gulp-sitemap';
+import robots from 'gulp-robots';
 import panini from 'panini';
 import plugins from 'gulp-load-plugins';
 import rimraf from 'rimraf';
@@ -26,7 +27,7 @@ function loadConfig() {
 }
 
 // Build the "dist" folder by running all of the below tasks
-gulp.task('build', gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), sitemapBuild));
+gulp.task('build', gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), sitemapBuild, robotBuild));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', gulp.series('build', server, watch));
@@ -39,6 +40,17 @@ function sitemapBuild() {
       siteUrl: 'http://www.stixeldev.com'
     }))
     .pipe(gulp.dest('./dist'));
+}
+
+function robotBuild() {
+  return gulp.src('./dist/index.html')
+  .pipe(robots({
+      useragent: '*',
+      allow: [],
+      disallow: [],
+      sitemap: 'http://www.stixeldev.com/sitemap.xml'
+  }))
+  .pipe(gulp.dest('./dist'));
 }
 
 // Delete the "dist" folder
