@@ -1,14 +1,15 @@
 'use strict';
 
-import plugins from 'gulp-load-plugins';
-import yargs from 'yargs';
 import browser from 'browser-sync';
+import fs from 'fs';
 import gulp from 'gulp';
+import sitemap from 'gulp-sitemap';
 import panini from 'panini';
+import plugins from 'gulp-load-plugins';
 import rimraf from 'rimraf';
 import sherpa from 'style-sherpa';
 import yaml from 'js-yaml';
-import fs from 'fs';
+import yargs from 'yargs';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -25,10 +26,20 @@ function loadConfig() {
 }
 
 // Build the "dist" folder by running all of the below tasks
-gulp.task('build', gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy)));
+gulp.task('build', gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), sitemapBuild));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', gulp.series('build', server, watch));
+
+function sitemapBuild() {
+  return gulp.src('dist/**/*.html', {
+      read: false
+    })
+    .pipe(sitemap({
+      siteUrl: 'http://www.stixeldev.com'
+    }))
+    .pipe(gulp.dest('./dist'));
+}
 
 // Delete the "dist" folder
 // This happens every time a build starts
