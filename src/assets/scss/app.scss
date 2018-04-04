@@ -1,10 +1,8 @@
 @charset 'utf-8';
-
 @import 'settings';
 @import "font-awesome";
 @import 'foundation';
 @import 'motion-ui';
-
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
@@ -47,11 +45,9 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 // @include foundation-flex-classes;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
-
 @import 'base';
-
 @import 'components/building-blocks/rounded-social-buttons';
 @import 'components/building-blocks/sticky-shrinknav';
+@import 'stars';

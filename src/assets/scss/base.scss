@@ -31,6 +31,10 @@ h6 {
   color: $secondary-color;
 }
 
+.wrapper h1 {
+  color: lighten($secondary-color, 20);
+}
+
 .bold {
   font-weight: bold;
 }
@@ -48,6 +52,11 @@ h6 {
   }
   border-bottom: 1px solid darken($secondary-color, 20);
   @extend .align-center;
+  background: -webkit-linear-gradient(top left, $secondary-color 0%, $black 100%);
+  background: -moz-linear-gradient(top left, $secondary-color 0%, $black 100%);
+  background: -o-linear-gradient(top left, $secondary-color 0%, $black 100%);
+  background: linear-gradient(to bottom right, $secondary-color 0%, $black 100%);
+
 }
 
 .position-relative {
@@ -59,6 +68,13 @@ h6 {
   bottom: 16px;
   right: 16px;
   @extend .align-right;
+
+  a {
+    background: -webkit-linear-gradient(top left, $primary-color 0%, darken($primary-color, 15) 100%);
+    background: -moz-linear-gradient(top left, $primary-color 0%, darken($primary-color, 15) 100%);
+    background: -o-linear-gradient(top left, $primary-color 0%, darken($primary-color, 15) 100%);
+    background: linear-gradient(to bottom right, $primary-color 0%, darken($primary-color, 15) 100%);
+  }
 }
 
 .card-section.action {
