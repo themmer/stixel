@@ -18,29 +18,29 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
 
   .sticky-shrinknav-header-title {
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     position: relative;
     transform: translateY(-$sticky-shrinknav-menu-height/2);
     margin-bottom: 0;
     color: $secondary-color;
     width: 100%;
-    h1 {
-      color: $primary-color;
-    }
+
     h3 {
       color: $white;
     }
   }
+
   .sticky-shrinknav-menu-wrapper {
     position: absolute;
     // Allow shadow
     background-color: lighten($primary-background, 9);
     bottom: 0;
     width: 100%;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
+
     .sticky-shrinknav-menu {
       height: $sticky-shrinknav-menu-height;
       line-height: $sticky-shrinknav-menu-height;
@@ -48,13 +48,14 @@ body {
       padding-left: 10px;
       background-color: $black;
       margin-bottom: 10px;
-      box-shadow: 8px 4px 8px 0px rgba(0, 0, 0, 0.25);
-      
+      box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.25);
+
       li {
         border-radius: 2px;
-        transition: all 0.3s ease;
+        transition: all .3s ease;
 
-        &:hover, &.active {
+        &.active,
+        &:hover {
           box-shadow: 0 0 0 1px $primary-color;
         }
       }
@@ -63,6 +64,7 @@ body {
         &:hover {
           color: $primary-color;
         }
+
         &.active {
           color: $primary-color;
         }
@@ -74,16 +76,18 @@ body {
 
 .sticky-shrinknav-wrapper {
   padding-top: 80px;
-  .sticky-shrinknav-header{
+
+  .sticky-shrinknav-header {
     opacity: .9;
     height: $sticky-shrinknav-menu-height;
 
-    .sticky-shrinknav-header-title{
+    .sticky-shrinknav-header-title {
       transform: scale(0);
-      transition: all 0.3s ease;
+      transition: all .3s ease;
     }
+
     .sticky-shrinknav-menu-wrapper {
-          bottom: 10;
+      bottom: 10;
     }
   }
 }
