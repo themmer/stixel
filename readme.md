@@ -1,5 +1,7 @@
 # Stixel Company Site
 
+deploy to production: npm build
+
 # ZURB Template
 
 ```
