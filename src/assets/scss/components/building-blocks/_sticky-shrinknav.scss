@@ -17,7 +17,7 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 
   background: $primary-color;
   background: -webkit-linear-gradient(top left, $secondary-color 0%, $black 100%);
@@ -26,16 +26,16 @@ body {
   background: linear-gradient(to bottom right, $secondary-color 0%, $black 100%);
 
   .company {
-    line-height: .85;
+    line-height: 0.85;
     margin-top: -5px;
   }
 
   .name {
-    line-height: .85;
+    line-height: 0.85;
   }
 
   .sticky-shrinknav-header-title {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     position: relative;
     transform: translateY(-$sticky-shrinknav-menu-height/2);
     margin: 0;
@@ -54,7 +54,7 @@ body {
     background-color: lighten($primary-background, 9);
     bottom: 0;
     width: 100%;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     .sticky-shrinknav-menu {
       height: $sticky-shrinknav-menu-height;
@@ -69,7 +69,7 @@ body {
       li {
         position: relative;
         border-radius: 2px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         &.active,
         &:hover {
@@ -95,12 +95,12 @@ body {
   padding-top: 80px;
 
   .sticky-shrinknav-header {
-    opacity: .9;
+    opacity: 0.9;
     height: $sticky-shrinknav-menu-height;
 
     .sticky-shrinknav-header-title {
       transform: scale(0);
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
     .sticky-shrinknav-menu-wrapper {
