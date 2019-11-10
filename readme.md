@@ -54,6 +54,9 @@ http://localhost:8000
 
 To create compressed, production-ready assets, run `npm run build`.
 
+go to dist folder
+aws s3 sync ./ s3://aws-website-stixeldev-6dppc
+
 # Font Awesome
 
 ```
