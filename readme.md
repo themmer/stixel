@@ -40,10 +40,18 @@ git clone https://github.com/zurb/foundation-zurb-template projectname
 
 Then open the folder in your command line, and install the needed dependencies:
 
+```
+Seems like v8.11.3 node is better to use
+```
+
 ```bash
 cd projectname
 npm install
 bower install
+```
+
+```
+Node Used:  v12.15.0
 ```
 
 Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
